@@ -7,6 +7,8 @@ class Application
     current_time = Time.now
     resp.write "The current time is #{current_time}\n"
     resp.write "The cutoff to 'afternoon' is #{afternoon}\n"
+    resp.write current_time.hour
+    resp.write current_time.minute
     if current_time < afternoon
       resp.write "Good Morning!"
     else
